@@ -1,13 +1,10 @@
 import java.io.*;
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
 
 public class BOJ_20920 {
 	// input
 	static int n, m;
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-	static HashSet<String> words = new HashSet<>();
 	static Map<String, Integer> hash = new HashMap<>();
 
 	static class Word implements Comparable<Word> {
@@ -44,8 +41,8 @@ public class BOJ_20920 {
 
 	public static void input() throws IOException {
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		int n = Integer.parseInt(st.nextToken());
-		int m = Integer.parseInt(st.nextToken());
+		n = Integer.parseInt(st.nextToken());
+		m = Integer.parseInt(st.nextToken());
 		for (int i = 0; i < n; i++) {
 			String word = br.readLine();
 			if (word.length() < m)
